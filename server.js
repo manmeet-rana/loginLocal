@@ -26,6 +26,7 @@ app.set('view engine', 'ejs');
 app.use(session({secret : 'ilovecodingilovecoding'}));
 
 app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 require('./app/routes.js')(app, passport); 
